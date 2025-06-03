@@ -57,7 +57,7 @@ const Index = () => {
     result: '12kg em 4 meses',
     image: '/lovable-uploads/cb12aa79-b48d-4eda-a25a-56d940fa714f.png'
   }, {
-    name: 'João Silva',
+    name: 'Monica Souza',
     text: 'Nunca pensei que conseguiria ganhar massa muscular tão rápido. As orientações da Fran são precisas.',
     result: '8kg de massa magra',
     image: '/lovable-uploads/967ce7ee-d4a3-463f-9594-49e3d5f488b8.png'
@@ -67,7 +67,7 @@ const Index = () => {
     result: 'Reeducação alimentar',
     image: '/lovable-uploads/ff083932-311f-4203-a767-2a7263f5b7cd.png'
   }, {
-    name: 'Pedro Oliveira',
+    name: 'Gabi Fernandes',
     text: 'A Fran me ajudou a entender que nutrição vai muito além de uma dieta. Hoje me sinto mais saudável e feliz.',
     result: 'Mudança de hábitos',
     image: '/lovable-uploads/1deebc3e-bf38-413f-a715-337a4194b197.png'
@@ -77,7 +77,7 @@ const Index = () => {
     result: '15kg perdidos',
     image: '/lovable-uploads/3ea39143-88d9-41b0-b755-55e62f44fd89.png'
   }, {
-    name: 'Lucas Ferreira',
+    name: 'Thalita Martins',
     text: 'O acompanhamento da Fran é diferenciado. Senti-me acolhido e motivado durante todo o processo.',
     result: 'Ganho de massa',
     image: '/lovable-uploads/f7d82ee5-006d-49af-affb-a908e329f6ca.png'
