@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Heart, Star, CheckCircle, Instagram, ArrowRight, Users, Trophy, Clock, Shield, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -300,27 +299,28 @@ const Index = () => {
           </div>
           <div className="grid md:grid-cols-2 gap-8">
             {specialties.map(specialty => (
-              <Card 
-                key={specialty.id} 
-                className="group cursor-pointer border-0 shadow-lg hover:shadow-xl transition-all duration-300 bg-white rounded-3xl overflow-hidden"
-              >
-                <CardContent className="p-8">
-                  <div className="flex items-center gap-4 mb-4">
-                    <div className="p-3 bg-pink-light rounded-2xl text-rose-burned group-hover:bg-rose-burned group-hover:text-white transition-colors">
-                      {specialty.icon}
+              <div key={specialty.id} className="relative">
+                <Card className="group cursor-pointer border-0 shadow-lg hover:shadow-xl transition-all duration-300 bg-white rounded-3xl overflow-hidden">
+                  <CardContent className="p-8">
+                    <div className="flex items-center gap-4 mb-4">
+                      <div className="p-3 bg-pink-light rounded-2xl text-rose-burned group-hover:bg-rose-burned group-hover:text-white transition-colors">
+                        {specialty.icon}
+                      </div>
+                      <h3 className="text-xl font-semibold text-gray-rose">{specialty.title}</h3>
                     </div>
-                    <h3 className="text-xl font-semibold text-gray-rose">{specialty.title}</h3>
-                  </div>
-                  <Button 
-                    onClick={() => handleSpecialtyClick(specialty.id)} 
-                    className="w-full bg-rose-burned hover:bg-rose-burned/90 text-white rounded-full transition-all duration-300 hover:scale-105"
-                  >
-                    Quero saber mais
-                    <ArrowRight className="w-4 h-4 ml-2" />
-                  </Button>
-                  
-                  {selectedSpecialty === specialty.id && (
-                    <div className="mt-6 p-6 bg-pink-light rounded-2xl animate-slide-up">
+                    <Button 
+                      onClick={() => handleSpecialtyClick(specialty.id)} 
+                      className="w-full bg-rose-burned hover:bg-rose-burned/90 text-white rounded-full transition-all duration-300 hover:scale-105"
+                    >
+                      Quero saber mais
+                      <ArrowRight className="w-4 h-4 ml-2" />
+                    </Button>
+                  </CardContent>
+                </Card>
+                
+                {selectedSpecialty === specialty.id && (
+                  <div className="absolute top-full left-0 right-0 z-10 mt-2">
+                    <div className="bg-white p-6 rounded-2xl shadow-xl border animate-scale-in">
                       <p className="text-gray-rose mb-4">{specialty.description}</p>
                       <div className="space-y-2 mb-6">
                         {specialty.benefits.map((benefit, index) => (
@@ -348,9 +348,9 @@ const Index = () => {
                         </Button>
                       </div>
                     </div>
-                  )}
-                </CardContent>
-              </Card>
+                  </div>
+                )}
+              </div>
             ))}
           </div>
         </div>
@@ -607,8 +607,7 @@ const Index = () => {
                 </Button>
                 <Button 
                   onClick={() => window.open(emailContact, '_blank')} 
-                  variant="outline" 
-                  className="border-white text-white hover:bg-white hover:text-rose-burned rounded-full px-6 py-3 transition-all duration-300 hover:scale-105"
+                  className="bg-white text-rose-burned hover:bg-white/90 rounded-full px-6 py-3 transition-all duration-300 hover:scale-105"
                 >
                   <Mail className="w-5 h-5 mr-2" />
                   Email
