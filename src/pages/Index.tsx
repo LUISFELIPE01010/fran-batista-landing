@@ -521,7 +521,7 @@ const Index = () => {
                   <Instagram className="w-5 h-5 mr-2" />
                   Instagram
                 </Button>
-                <Button onClick={() => window.open(emailContact, '_blank')} variant="outline" className="border-white hover:bg-white hover:text-rose-burned rounded-full px-6 py-3 transition-all duration-300 hover:scale-105 text-base text-transparent">
+                <Button onClick={() => window.open(emailContact, '_blank')} variant="outline" className="border-white hover:bg-white hover:text-rose-burned rounded-full px-6 py-3 transition-all duration-300 hover:scale-105 text-base text-primary-DEFAULT">
                   <Mail className="w-5 h-5 mr-2" />
                   Email
                 </Button>
