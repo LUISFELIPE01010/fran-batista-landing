@@ -235,7 +235,7 @@ const Index = () => {
         <div className="container mx-auto max-w-6xl">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="relative">
-              <img src="/lovable-uploads/db71933b-3576-4b0e-af8b-bcfbe9814866.png" alt="Sobre Fran Batista" className="w-full h-auto rounded-3xl shadow-xl" />
+              <img alt="Sobre Fran Batista" className="w-full h-auto rounded-3xl shadow-xl" src="/lovable-uploads/263ce158-414b-4387-aec8-e7dfb47bc1a3.png" />
             </div>
             <div className="space-y-6">
               <h2 className="text-4xl font-bold text-gray-rose">Quem é Fran Batista</h2>
