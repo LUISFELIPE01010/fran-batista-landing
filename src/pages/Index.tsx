@@ -50,32 +50,32 @@ const Index = () => {
     name: 'Maria Santos',
     text: 'Com a Fran consegui emagrecer 12kg de forma saudável e sem sofrimento. O acompanhamento é incrível!',
     result: '12kg em 4 meses',
-    image: '/lovable-uploads/07b75889-9c48-45c8-8281-42180e079693.png'
+    image: '/lovable-uploads/cb12aa79-b48d-4eda-a25a-56d940fa714f.png'
   }, {
     name: 'João Silva',
     text: 'Nunca pensei que conseguiria ganhar massa muscular tão rápido. As orientações da Fran são precisas.',
     result: '8kg de massa magra',
-    image: '/lovable-uploads/c973bbd6-d520-4842-ba21-54834b9f7a77.png'
+    image: '/lovable-uploads/967ce7ee-d4a3-463f-9594-49e3d5f488b8.png'
   }, {
     name: 'Ana Costa',
     text: 'Mudou completamente minha relação com a comida. Hoje tenho uma alimentação equilibrada e prazerosa.',
     result: 'Reeducação alimentar',
-    image: '/lovable-uploads/db71933b-3576-4b0e-af8b-bcfbe9814866.png'
+    image: '/lovable-uploads/ff083932-311f-4203-a767-2a7263f5b7cd.png'
   }, {
     name: 'Pedro Oliveira',
     text: 'A Fran me ajudou a entender que nutrição vai muito além de uma dieta. Hoje me sinto mais saudável e feliz.',
     result: 'Mudança de hábitos',
-    image: '/lovable-uploads/a48297bd-5b37-4a99-962b-a25e6cb671ec.png'
+    image: '/lovable-uploads/1deebc3e-bf38-413f-a715-337a4194b197.png'
   }, {
     name: 'Carla Mendes',
     text: 'Profissional excepcional! Me orientou de forma personalizada e consegui alcançar meus objetivos.',
     result: '15kg perdidos',
-    image: '/lovable-uploads/07b75889-9c48-45c8-8281-42180e079693.png'
+    image: '/lovable-uploads/3ea39143-88d9-41b0-b755-55e62f44fd89.png'
   }, {
     name: 'Lucas Ferreira',
     text: 'O acompanhamento da Fran é diferenciado. Senti-me acolhido e motivado durante todo o processo.',
     result: 'Ganho de massa',
-    image: '/lovable-uploads/c6615e86-b954-4f78-8fd1-eda8867a71e5.png'
+    image: '/lovable-uploads/f7d82ee5-006d-49af-affb-a908e329f6ca.png'
   }];
   const moreTestimonials = [{
     name: 'Juliana Campos',
