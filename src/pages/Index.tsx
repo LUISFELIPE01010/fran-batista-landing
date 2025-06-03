@@ -1,6 +1,6 @@
 
 import { useState } from 'react';
-import { Heart, Star, CheckCircle, MessageCircle, Instagram, ArrowRight, Users, Trophy, Clock, Shield } from 'lucide-react';
+import { Heart, Star, CheckCircle, Instagram, ArrowRight, Users, Trophy, Clock, Shield, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 
@@ -9,8 +9,8 @@ const Index = () => {
   const [quizStep, setQuizStep] = useState(0);
   const [quizAnswers, setQuizAnswers] = useState<Record<string, string>>({});
 
-  const whatsappLink = "https://wa.me/5513996631392";
   const instagramLink = "https://instagram.com/nutrifranbatista";
+  const emailContact = "mailto:nutrifranbatista@outlook.com";
 
   const specialties = [
     {
@@ -47,7 +47,7 @@ const Index = () => {
     {
       title: 'Como montar um prato equilibrado',
       description: 'A regra dos 50-25-25 para uma refeição completa',
-      image: '/lovable-uploads/c973bbd6-d520-4842-ba21-54834b9f7a77.png'
+      image: '/lovable-uploads/db71933b-3576-4b0e-af8b-bcfbe9814866.png'
     },
     {
       title: 'Mitos sobre carboidrato',
@@ -65,17 +65,127 @@ const Index = () => {
     {
       name: 'Maria Santos',
       text: 'Com a Fran consegui emagrecer 12kg de forma saudável e sem sofrimento. O acompanhamento é incrível!',
-      result: '12kg em 4 meses'
+      result: '12kg em 4 meses',
+      image: '/lovable-uploads/07b75889-9c48-45c8-8281-42180e079693.png'
     },
     {
       name: 'João Silva',
       text: 'Nunca pensei que conseguiria ganhar massa muscular tão rápido. As orientações da Fran são precisas.',
-      result: '8kg de massa magra'
+      result: '8kg de massa magra',
+      image: '/lovable-uploads/c973bbd6-d520-4842-ba21-54834b9f7a77.png'
     },
     {
       name: 'Ana Costa',
       text: 'Mudou completamente minha relação com a comida. Hoje tenho uma alimentação equilibrada e prazerosa.',
-      result: 'Reeducação alimentar'
+      result: 'Reeducação alimentar',
+      image: '/lovable-uploads/db71933b-3576-4b0e-af8b-bcfbe9814866.png'
+    },
+    {
+      name: 'Pedro Oliveira',
+      text: 'A Fran me ajudou a entender que nutrição vai muito além de uma dieta. Hoje me sinto mais saudável e feliz.',
+      result: 'Mudança de hábitos',
+      image: '/lovable-uploads/a48297bd-5b37-4a99-962b-a25e6cb671ec.png'
+    },
+    {
+      name: 'Carla Mendes',
+      text: 'Profissional excepcional! Me orientou de forma personalizada e consegui alcançar meus objetivos.',
+      result: '15kg perdidos',
+      image: '/lovable-uploads/07b75889-9c48-45c8-8281-42180e079693.png'
+    },
+    {
+      name: 'Lucas Ferreira',
+      text: 'O acompanhamento da Fran é diferenciado. Senti-me acolhido e motivado durante todo o processo.',
+      result: 'Ganho de massa',
+      image: '/lovable-uploads/c6615e86-b954-4f78-8fd1-eda8867a71e5.png'
+    }
+  ];
+
+  const moreTestimonials = [
+    {
+      name: 'Juliana Campos',
+      text: 'Fran transformou minha vida! Aprendi a comer de forma equilibrada sem abrir mão do prazer.',
+      result: 'Reeducação completa'
+    },
+    {
+      name: 'Roberto Santos',
+      text: 'Consegui definir meu corpo de forma saudável. As dicas da Fran são ouro puro!',
+      result: 'Definição muscular'
+    },
+    {
+      name: 'Fernanda Lima',
+      text: 'O acompanhamento online é fantástico. Me sinto acompanhada mesmo à distância.',
+      result: '10kg perdidos'
+    },
+    {
+      name: 'Gabriel Costa',
+      text: 'Fran me ensinou que alimentação saudável pode ser simples e gostosa.',
+      result: 'Hábitos saudáveis'
+    }
+  ];
+
+  const instagramPosts = [
+    {
+      id: 1,
+      image: '/lovable-uploads/db71933b-3576-4b0e-af8b-bcfbe9814866.png',
+      caption: 'Prato equilibrado: proteína, carboidrato e vegetais em harmonia perfeita! 🥗✨',
+      likes: 245
+    },
+    {
+      id: 2,
+      image: '/lovable-uploads/07b75889-9c48-45c8-8281-42180e079693.png',
+      caption: 'A nutrição vai além da comida. É sobre cuidar de você com amor e ciência! 💚',
+      likes: 189
+    },
+    {
+      id: 3,
+      image: '/lovable-uploads/c973bbd6-d520-4842-ba21-54834b9f7a77.png',
+      caption: 'Cada refeição é uma oportunidade de nutrir seu corpo e sua alma! 🌟',
+      likes: 312
+    },
+    {
+      id: 4,
+      image: '/lovable-uploads/a48297bd-5b37-4a99-962b-a25e6cb671ec.png',
+      caption: 'Proteína em todas as refeições: o segredo para músculos saudáveis! 💪',
+      likes: 178
+    },
+    {
+      id: 5,
+      image: '/lovable-uploads/c6615e86-b954-4f78-8fd1-eda8867a71e5.png',
+      caption: 'Alimentação colorida = nutrientes variados. Pinte seu prato! 🎨',
+      likes: 267
+    },
+    {
+      id: 6,
+      image: '/lovable-uploads/db71933b-3576-4b0e-af8b-bcfbe9814866.png',
+      caption: 'Planejamento é tudo! Uma semana organizada faz toda a diferença 📋',
+      likes: 198
+    }
+  ];
+
+  const feedbacks = [
+    {
+      platform: 'Google',
+      rating: 5,
+      text: 'Profissional incrível! Muito atenciosa e competente.',
+      author: 'Marina Silva'
+    },
+    {
+      platform: 'Instagram',
+      rating: 5,
+      text: 'Conteúdo sempre de qualidade. Aprendo muito com as dicas!',
+      author: 'Carlos Eduardo'
+    },
+    {
+      platform: 'WhatsApp',
+      rating: 5,
+      text: 'Atendimento humanizado e eficiente. Recomendo!',
+      author: 'Patrícia Lopes'
+    },
+    {
+      platform: 'Consulta',
+      rating: 5,
+      text: 'Mudou minha vida! Profissional dedicada e carinhosa.',
+      author: 'André Moreira'
     }
   ];
 
@@ -105,7 +215,6 @@ const Index = () => {
     if (quizStep < quizQuestions.length - 1) {
       setQuizStep(quizStep + 1);
     } else {
-      // Quiz completed - you could add logic here to determine recommendation
       console.log('Quiz completed:', newAnswers);
     }
   };
@@ -123,20 +232,33 @@ const Index = () => {
       <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-nude via-pink-light to-white px-4">
         <div className="container mx-auto max-w-6xl grid lg:grid-cols-2 gap-12 items-center">
           <div className="text-center lg:text-left space-y-8 animate-fade-in">
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-rose leading-tight">
-              Nutrição inteligente,
-              <span className="text-rose-burned block">com ciência e empatia</span>
-            </h1>
+            <div className="space-y-2">
+              <p className="text-lg text-rose-burned font-medium">Nutri Fran Batista</p>
+              <h1 className="text-4xl md:text-6xl font-bold text-gray-rose leading-tight">
+                Cuide da sua saúde
+                <span className="text-rose-burned block">com amor.</span>
+              </h1>
+            </div>
             <p className="text-xl text-gray-rose/80 leading-relaxed max-w-2xl">
               Consultas 100% online com acompanhamento individualizado para você alcançar seus objetivos com leveza e consistência.
             </p>
-            <Button 
-              onClick={() => window.open(whatsappLink, '_blank')}
-              className="bg-rose-burned hover:bg-rose-burned/90 text-white px-8 py-6 text-lg rounded-full shadow-lg transition-all duration-300 hover:scale-105"
-            >
-              <MessageCircle className="w-5 h-5 mr-2" />
-              Quero atendimento personalizado
-            </Button>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+              <Button 
+                onClick={() => window.open(instagramLink, '_blank')}
+                className="bg-rose-burned hover:bg-rose-burned/90 text-white px-8 py-6 text-lg rounded-full shadow-lg transition-all duration-300 hover:scale-105"
+              >
+                <Instagram className="w-5 h-5 mr-2" />
+                Seguir no Instagram
+              </Button>
+              <Button 
+                onClick={() => window.open(emailContact, '_blank')}
+                variant="outline"
+                className="border-rose-burned text-rose-burned hover:bg-rose-burned hover:text-white px-8 py-6 text-lg rounded-full shadow-lg transition-all duration-300 hover:scale-105"
+              >
+                <Mail className="w-5 h-5 mr-2" />
+                Enviar Email
+              </Button>
+            </div>
             <div className="flex items-center justify-center lg:justify-start gap-6 pt-4">
               <div className="flex items-center gap-2">
                 <Users className="w-5 h-5 text-rose-burned" />
@@ -151,7 +273,7 @@ const Index = () => {
           <div className="relative animate-scale-in">
             <div className="relative w-full max-w-md mx-auto">
               <img 
-                src="/lovable-uploads/c973bbd6-d520-4842-ba21-54834b9f7a77.png" 
+                src="/lovable-uploads/07b75889-9c48-45c8-8281-42180e079693.png" 
                 alt="Fran Batista - Nutricionista"
                 className="w-full h-auto rounded-3xl shadow-2xl"
               />
@@ -175,7 +297,7 @@ const Index = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="relative">
               <img 
-                src="/lovable-uploads/c6615e86-b954-4f78-8fd1-eda8867a71e5.png" 
+                src="/lovable-uploads/db71933b-3576-4b0e-af8b-bcfbe9814866.png" 
                 alt="Sobre Fran Batista"
                 className="w-full h-auto rounded-3xl shadow-xl"
               />
@@ -203,11 +325,18 @@ const Index = () => {
               <div className="flex gap-4 pt-4">
                 <Button 
                   onClick={() => window.open(instagramLink, '_blank')}
-                  variant="outline" 
-                  className="border-rose-burned text-rose-burned hover:bg-rose-burned hover:text-white"
+                  className="bg-rose-burned hover:bg-rose-burned/90 text-white rounded-full px-6 py-3 transition-all duration-300 hover:scale-105"
                 >
                   <Instagram className="w-4 h-4 mr-2" />
                   @nutrifranbatista
+                </Button>
+                <Button 
+                  onClick={() => window.open(emailContact, '_blank')}
+                  variant="outline"
+                  className="border-rose-burned text-rose-burned hover:bg-rose-burned hover:text-white rounded-full px-6 py-3 transition-all duration-300 hover:scale-105"
+                >
+                  <Mail className="w-4 h-4 mr-2" />
+                  Email
                 </Button>
               </div>
             </div>
@@ -234,8 +363,7 @@ const Index = () => {
                   </div>
                   <Button 
                     onClick={() => handleSpecialtyClick(specialty.id)}
-                    variant="outline" 
-                    className="w-full border-rose-burned text-rose-burned hover:bg-rose-burned hover:text-white rounded-full"
+                    className="w-full bg-rose-burned hover:bg-rose-burned/90 text-white rounded-full transition-all duration-300 hover:scale-105"
                   >
                     Quero saber mais
                     <ArrowRight className="w-4 h-4 ml-2" />
@@ -252,13 +380,23 @@ const Index = () => {
                           </div>
                         ))}
                       </div>
-                      <Button 
-                        onClick={() => window.open(whatsappLink, '_blank')}
-                        className="w-full bg-rose-burned hover:bg-rose-burned/90 text-white rounded-full"
-                      >
-                        <MessageCircle className="w-4 h-4 mr-2" />
-                        Agendar agora
-                      </Button>
+                      <div className="flex gap-3">
+                        <Button 
+                          onClick={() => window.open(instagramLink, '_blank')}
+                          className="flex-1 bg-rose-burned hover:bg-rose-burned/90 text-white rounded-full transition-all duration-300 hover:scale-105"
+                        >
+                          <Instagram className="w-4 h-4 mr-2" />
+                          Instagram
+                        </Button>
+                        <Button 
+                          onClick={() => window.open(emailContact, '_blank')}
+                          variant="outline"
+                          className="flex-1 border-rose-burned text-rose-burned hover:bg-rose-burned hover:text-white rounded-full transition-all duration-300 hover:scale-105"
+                        >
+                          <Mail className="w-4 h-4 mr-2" />
+                          Email
+                        </Button>
+                      </div>
                     </div>
                   )}
                 </CardContent>
@@ -295,8 +433,48 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Instagram Posts Section */}
+      <section className="py-20 px-4 bg-gradient-to-br from-nude to-pink-light">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-rose mb-4">Posts no Instagram</h2>
+            <p className="text-xl text-gray-rose/70">Acompanhe nosso conteúdo diário de nutrição</p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            {instagramPosts.map((post) => (
+              <Card key={post.id} className="group cursor-pointer border-0 shadow-lg hover:shadow-xl transition-all duration-300 bg-white rounded-3xl overflow-hidden hover:scale-105">
+                <div className="aspect-square overflow-hidden">
+                  <img 
+                    src={post.image} 
+                    alt={post.caption}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                  />
+                </div>
+                <CardContent className="p-6">
+                  <p className="text-gray-rose text-sm mb-3 line-clamp-2">{post.caption}</p>
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-2">
+                      <Heart className="w-4 h-4 text-rose-burned" />
+                      <span className="text-sm text-gray-rose">{post.likes}</span>
+                    </div>
+                    <Button 
+                      onClick={() => window.open(instagramLink, '_blank')}
+                      size="sm"
+                      className="bg-rose-burned hover:bg-rose-burned/90 text-white rounded-full transition-all duration-300 hover:scale-105"
+                    >
+                      <Instagram className="w-3 h-3 mr-1" />
+                      Ver
+                    </Button>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Quiz Section */}
-      <section className="py-20 px-4 bg-gradient-to-br from-pink-light to-nude">
+      <section className="py-20 px-4 bg-white">
         <div className="container mx-auto max-w-4xl">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-rose mb-4">Descubra o melhor plano para você</h2>
@@ -346,13 +524,23 @@ const Index = () => {
                   <p className="text-gray-rose/70">
                     Baseado nas suas respostas, este é o programa ideal para alcançar seus objetivos.
                   </p>
-                  <Button 
-                    onClick={() => window.open(whatsappLink, '_blank')}
-                    className="bg-rose-burned hover:bg-rose-burned/90 text-white px-8 py-4 rounded-full shadow-lg"
-                  >
-                    <MessageCircle className="w-5 h-5 mr-2" />
-                    Começar agora
-                  </Button>
+                  <div className="flex gap-4 justify-center">
+                    <Button 
+                      onClick={() => window.open(instagramLink, '_blank')}
+                      className="bg-rose-burned hover:bg-rose-burned/90 text-white px-8 py-4 rounded-full shadow-lg transition-all duration-300 hover:scale-105"
+                    >
+                      <Instagram className="w-5 h-5 mr-2" />
+                      Instagram
+                    </Button>
+                    <Button 
+                      onClick={() => window.open(emailContact, '_blank')}
+                      variant="outline"
+                      className="border-rose-burned text-rose-burned hover:bg-rose-burned hover:text-white px-8 py-4 rounded-full shadow-lg transition-all duration-300 hover:scale-105"
+                    >
+                      <Mail className="w-5 h-5 mr-2" />
+                      Email
+                    </Button>
+                  </div>
                 </div>
               )}
             </CardContent>
@@ -360,8 +548,8 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      <section className="py-20 px-4 bg-white">
+      {/* Main Testimonials Section */}
+      <section className="py-20 px-4 bg-gradient-to-br from-pink-light to-nude">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-rose mb-4">Resultados e Depoimentos</h2>
@@ -369,7 +557,14 @@ const Index = () => {
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
-              <Card key={index} className="border-0 shadow-lg bg-gradient-to-br from-pink-light to-nude rounded-3xl">
+              <Card key={index} className="border-0 shadow-lg bg-white rounded-3xl overflow-hidden hover:scale-105 transition-all duration-300">
+                <div className="aspect-video overflow-hidden">
+                  <img 
+                    src={testimonial.image}
+                    alt={testimonial.name}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
                 <CardContent className="p-8 text-center">
                   <div className="flex justify-center mb-4">
                     {[...Array(5)].map((_, i) => (
@@ -381,6 +576,62 @@ const Index = () => {
                     <h4 className="font-semibold text-gray-rose">{testimonial.name}</h4>
                     <p className="text-sm text-rose-burned font-medium">{testimonial.result}</p>
                   </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Additional Testimonials Section */}
+      <section className="py-20 px-4 bg-white">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-rose mb-4">Mais Depoimentos</h2>
+            <p className="text-xl text-gray-rose/70">Palavras que motivam nossa jornada</p>
+          </div>
+          <div className="grid md:grid-cols-2 gap-8">
+            {moreTestimonials.map((testimonial, index) => (
+              <Card key={index} className="border-0 shadow-lg bg-gradient-to-br from-nude to-pink-light rounded-3xl hover:scale-105 transition-all duration-300">
+                <CardContent className="p-8">
+                  <div className="flex justify-center mb-4">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="w-5 h-5 text-rose-burned fill-current" />
+                    ))}
+                  </div>
+                  <p className="text-gray-rose italic mb-6 text-center">"{testimonial.text}"</p>
+                  <div className="text-center space-y-2">
+                    <h4 className="font-semibold text-gray-rose">{testimonial.name}</h4>
+                    <p className="text-sm text-rose-burned font-medium">{testimonial.result}</p>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Feedbacks Section */}
+      <section className="py-20 px-4 bg-gradient-to-br from-nude to-white">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-rose mb-4">Feedbacks de Clientes</h2>
+            <p className="text-xl text-gray-rose/70">Avaliações em diferentes plataformas</p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {feedbacks.map((feedback, index) => (
+              <Card key={index} className="border-0 shadow-lg bg-white rounded-3xl hover:scale-105 transition-all duration-300">
+                <CardContent className="p-6 text-center">
+                  <div className="mb-4">
+                    <p className="text-sm font-medium text-rose-burned mb-2">{feedback.platform}</p>
+                    <div className="flex justify-center">
+                      {[...Array(feedback.rating)].map((_, i) => (
+                        <Star key={i} className="w-4 h-4 text-rose-burned fill-current" />
+                      ))}
+                    </div>
+                  </div>
+                  <p className="text-gray-rose text-sm italic mb-4">"{feedback.text}"</p>
+                  <h4 className="font-semibold text-gray-rose text-sm">{feedback.author}</h4>
                 </CardContent>
               </Card>
             ))}
@@ -410,19 +661,19 @@ const Index = () => {
               </div>
               <div className="flex flex-col gap-4">
                 <Button 
-                  onClick={() => window.open(whatsappLink, '_blank')}
-                  className="bg-white text-rose-burned hover:bg-white/90 rounded-full px-6 py-3"
-                >
-                  <MessageCircle className="w-5 h-5 mr-2" />
-                  WhatsApp
-                </Button>
-                <Button 
                   onClick={() => window.open(instagramLink, '_blank')}
-                  variant="outline"
-                  className="border-white text-white hover:bg-white hover:text-rose-burned rounded-full px-6 py-3"
+                  className="bg-white text-rose-burned hover:bg-white/90 rounded-full px-6 py-3 transition-all duration-300 hover:scale-105"
                 >
                   <Instagram className="w-5 h-5 mr-2" />
                   Instagram
+                </Button>
+                <Button 
+                  onClick={() => window.open(emailContact, '_blank')}
+                  variant="outline"
+                  className="border-white text-white hover:bg-white hover:text-rose-burned rounded-full px-6 py-3 transition-all duration-300 hover:scale-105"
+                >
+                  <Mail className="w-5 h-5 mr-2" />
+                  Email
                 </Button>
               </div>
             </div>
