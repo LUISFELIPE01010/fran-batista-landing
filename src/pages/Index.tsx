@@ -85,33 +85,33 @@ const Index = () => {
 
   const instagramPosts = [{
     id: 1,
-    image: '/lovable-uploads/db71933b-3576-4b0e-af8b-bcfbe9814866.png',
-    caption: 'Prato equilibrado: proteína, carboidrato e vegetais em harmonia perfeita! 🥗✨',
+    image: '/lovable-uploads/checklist-habitos.png',
+    caption: 'Checklist para melhorar os seus hábitos saudáveis: pequenas mudanças, grandes resultados! ✅💚',
     likes: 245
   }, {
     id: 2,
-    image: '/lovable-uploads/07b75889-9c48-45c8-8281-42180e079693.png',
-    caption: 'A nutrição vai além da comida. É sobre cuidar de você com amor e ciência! 💚',
+    image: '/lovable-uploads/fran-sobremesa.png',
+    caption: 'A vida é doce e você pode aproveitar com equilíbrio! Sobremesa também faz parte de uma alimentação saudável 🍰💕',
     likes: 189
   }, {
     id: 3,
-    image: '/lovable-uploads/c973bbd6-d520-4842-ba21-54834b9f7a77.png',
-    caption: 'Cada refeição é uma oportunidade de nutrir seu corpo e sua alma! 🌟',
+    image: '/lovable-uploads/prato-equilibrado-novo.png',
+    caption: 'Prato colorido e nutritivo: proteína, carboidratos complexos e vegetais frescos! A receita perfeita para nutrir seu corpo 🥗✨',
     likes: 312
   }, {
     id: 4,
-    image: '/lovable-uploads/a48297bd-5b37-4a99-962b-a25e6cb671ec.png',
-    caption: 'Proteína em todas as refeições: o segredo para músculos saudáveis! 💪',
+    image: '/lovable-uploads/equipe-curso.png',
+    caption: 'Equipe incrível! Juntas aprendendo e crescendo na área da nutrição. O conhecimento compartilhado multiplica! 👥📚',
     likes: 178
   }, {
     id: 5,
-    image: '/lovable-uploads/c6615e86-b954-4f78-8fd1-eda8867a71e5.png',
-    caption: 'Alimentação colorida = nutrientes variados. Pinte seu prato! 🎨',
+    image: '/lovable-uploads/evento-nutricao.png',
+    caption: 'Representando no 7º Meeting Brasileiro de Nutrição Estética! Sempre em busca de conhecimento e inovação 💪🔬',
     likes: 267
   }, {
     id: 6,
-    image: '/lovable-uploads/db71933b-3576-4b0e-af8b-bcfbe9814866.png',
-    caption: 'Planejamento é tudo! Uma semana organizada faz toda a diferença 📋',
+    image: '/lovable-uploads/congresso-nutricao.png',
+    caption: 'Participando de congressos e eventos científicos para trazer sempre o melhor para meus pacientes! 📖💜',
     likes: 198
   }];
 
